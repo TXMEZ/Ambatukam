@@ -1,0 +1,106 @@
+:root {
+    --bg1: rgb(221, 217, 217);
+    --border-color: #848688;
+    --header-color: rgb(221, 217, 217);
+    --nav-text1: #333333;
+    --nav-text2: #6f7379;
+    --text1: #a0a0a0;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg1);
+}
+
+/* 2. Header & Container Layout */
+.header {
+    background-color: var(--header-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 3. Navigation Layout */
+.Navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* 4. Navigation Menu List */
+.Nav-Item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+/* 5. Navigation Links Style */
+.Nav-Item li {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--nav-text1);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.Nav-Item li:hover {
+    color: var(--nav-text2);
+    background-color: var(--bg2);
+}
+
+/* Images */
+.Images {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.Images img {
+    width: 80%;
+    height: 800px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg1); /* Sleek dark theme background */
+    color: var(--text1);            /* Muted text color that is easy on the eyes */
+    padding: 24px 0;           /* Vertical padding for spacing */
+    margin-top: auto;          /* Pushes the footer to the bottom if page content is short */
+    border-top: 1px solid var(--border-color);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;   /* Centers the copyright text horizontally */
+    align-items: center;
+}
+
+.footer p {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
