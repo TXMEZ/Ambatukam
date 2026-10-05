@@ -7,6 +7,13 @@
     --text1: #a0a0a0;
 }
 
+[data-theme="dark"] .body-bg-img,
+[data-theme="dark"] .header-bg-img,
+[data-theme="dark"] .footer-bg-img {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Reset */
 * {
     box-sizing: border-box;
@@ -147,13 +154,6 @@ body {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-[data-theme="dark"] .body-bg-img,
-[data-theme="dark"] .header-bg-img,
-[data-theme="dark"] .footer-bg-img {
-    opacity: 0;
-    visibility: hidden;
 }
 
 .theme-toggle-wrapper {
