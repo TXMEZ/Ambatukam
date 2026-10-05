@@ -1,7 +1,7 @@
 :root {
-    --bg1: rgb(75, 73, 73);
+    --bg1: rgb(24, 23, 23);
     --border-color: #848688;
-    --header-color: rgb(221, 217, 217);
+    --header-color: rgb(46, 45, 45);
     --nav-text1: #acaaaa;
     --nav-text2: #659cee;
     --text1: #a0a0a0;
@@ -138,4 +138,87 @@ body {
     font-weight: 400;
     letter-spacing: 0.5px;
     text-align: center;
+}
+
+/* Theme Toggle */
+.body-bg-img,
+.header-bg-img,
+.footer-bg-img {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+[data-theme="dark"] .body-bg-img,
+[data-theme="dark"] .header-bg-img,
+[data-theme="dark"] .footer-bg-img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.theme-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #0c0d10;
+    padding: 4px 10px;
+    border-radius: 20px;
+    position: absolute;
+    right: 24px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.theme-toggle {
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 36px;
+}
+
+.theme-toggle input {
+    display: none;
+}
+
+.slider {
+    background-color: #2c2d30;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    background-color: #ffffff;
+    bottom: 3px;
+    content: "";
+    height: 12px;
+    left: 4px;
+    position: absolute;
+    width: 12px;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4a4b50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+.theme-icon {
+    width: 16px;
+    height: 16px;
+    color: #8a8b90;
+    transition: color 0.3s ease;
+}
+
+input:checked ~ .theme-icon {
+    color: #ffffff;
 }
